@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Gin Rai Dee?</string>
+
+    <!-- หน้าแรก -->
+    <string name="main_title">มื้อนี้กินอะไรดี?</string>
+    <string name="main_subtitle">เลือกแนวที่อยากกิน แล้วให้เราสุ่มให้</string>
+    <string name="main_menu_count">มีเมนูในคลัง %1$d จาน</string>
+    <string name="main_start">🎲  เริ่มสุ่มเมนู</string>
+    <string name="main_ai">🤖  ให้ AI ช่วยแนะนำ</string>
+
+    <!-- หน้าเลือกหมวด -->
+    <string name="choice_title">ตอนนี้อยากกินแนวไหน?</string>
+    <string name="choice_subtitle">เลือกหมวดก่อน จะได้สุ่มแล้วตรงใจ</string>
+    <string name="choice_button_format">%1$s  %2$s</string>
+
+    <!-- หน้าสุ่ม -->
+    <string name="random_title">พร้อมหมุนหรือยัง?</string>
+    <string name="random_category_format">หมวด %1$s %2$s</string>
+    <string name="random_idle_hint">กดปุ่มด้านล่างเพื่อหมุน</string>
+    <string name="random_filter_title">เงื่อนไขเพิ่มเติม (ไม่ใส่ก็ได้)</string>
+    <string name="random_max_price">ราคาไม่เกิน (บาท)</string>
+    <string name="random_max_calories">แคลอรี่ไม่เกิน</string>
+    <string name="random_vegetarian">เอาเฉพาะเมนูมังสวิรัติ</string>
+    <string name="random_spin">🎯  หมุน!</string>
+    <string name="random_no_match">ไม่มีเมนูไหนเข้าเงื่อนไขเลย ลองผ่อนเงื่อนไขลงหน่อยนะ</string>
+
+    <!-- หน้าผลลัพธ์ -->
+    <string name="result_title">มื้อนี้เอาอันนี้เลย!</string>
+    <string name="result_empty_title">ยังไม่มีผลลัพธ์</string>
+    <string name="result_spin_again">🔄  หมุนใหม่</string>
+    <string name="result_home">🏠  กลับหน้าแรก</string>
+    <string name="favorite_add">🤍  เพิ่มเป็นเมนูโปรด</string>
+    <string name="favorite_added">❤️  รายการโปรด</string>
+    <string name="ingredients_title">🛒  วัตถุดิบหลัก</string>
+    <string name="recipe_title">🍳  วิธีทำแบบย่อ</string>
+
+    <!-- หน้า AI -->
+    <string name="ai_title">ให้ AI ช่วยเลือก</string>
+    <string name="ai_subtitle">พิมพ์บอกได้เลยว่าตอนนี้รู้สึกอยากกินแบบไหน</string>
+    <string name="ai_hint">เช่น อยากกินเผ็ด ๆ ทำเร็ว งบไม่เกิน 80 บาท</string>
+    <string name="ai_ask">✨  ขอคำแนะนำ</string>
+    <string name="ai_idle_hint">พิมพ์คำอธิบายแล้วกดขอคำแนะนำได้เลย</string>
+    <string name="ai_loading">กำลังคิดให้อยู่…</string>
+    <string name="ai_result_count">แนะนำมาให้ %1$d เมนู</string>
+    <string name="ai_no_key_hint">โหมดค้นหาออฟไลน์ (พิมพ์คำค้นหา หรือเลือกจากปุ่มตัวอย่างด้านล่างได้เลย)</string>
+    <string name="ai_quick_suggestions">ตัวอย่างคำค้นหา:</string>
+    <string name="ai_chip_spicy">🌶️ เผ็ด ๆ แซ่บ ๆ</string>
+    <string name="ai_chip_spicy_prompt">อยากกินอะไรเผ็ด ๆ แซ่บ ๆ จัดจ้าน</string>
+    <string name="ai_chip_healthy">🥗 เพื่อสุขภาพ แคลน้อย</string>
+    <string name="ai_chip_healthy_prompt">อยากกินอาหารเพื่อสุขภาพ แคลอรี่ต่ำ ผักเยอะ ๆ</string>
+    <string name="ai_chip_fast">⚡ ด่วน ๆ งบไม่เกิน 80</string>
+    <string name="ai_chip_fast_prompt">อยากกินอาหารจานด่วน ทำเร็ว งบไม่เกิน 80 บาท</string>
+    <string name="ai_chip_dessert">🍰 ของหวาน ล้างปาก</string>
+    <string name="ai_chip_dessert_prompt">อยากกินของหวาน ล้างปาก สดชื่น</string>
+    <string name="ai_chip_sharing">🍲 ปาร์ตี้ สังสรรค์</string>
+    <string name="ai_chip_sharing_prompt">อยากกินเมนูปาร์ตี้ ชาบู หมูกระทะ กับเพื่อน</string>
+
+    <!-- ใช้ร่วมกัน -->
+    <string name="back">← ย้อนกลับ</string>
+</resources>

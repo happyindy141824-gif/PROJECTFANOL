@@ -1,0 +1,4 @@
+// Top-level build file. ค่า config ที่ใช้ร่วมกันทุก module อยู่ที่นี่
+plugins {
+    id 'com.android.application' version '9.4.1' apply false
+}

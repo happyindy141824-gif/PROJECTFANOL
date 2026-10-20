@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cream"
+    android:orientation="vertical">
+
+    <!-- Top Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_revert"
+            android:contentDescription="Back" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="📅 วางแผนเมนูรายสัปดาห์"
+            android:textColor="@color/text_primary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+    <!-- Week Navigation: เลื่อนดูสัปดาห์ก่อน/ถัดไป -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/btnPrevWeek"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="สัปดาห์ก่อน"
+            android:gravity="center"
+            android:text="‹"
+            android:textColor="@color/orange_primary"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvWeekRange"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:gravity="center"
+            android:text="13 – 19 ต.ค. 2569"
+            android:textColor="@color/text_primary"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/btnNextWeek"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="สัปดาห์ถัดไป"
+            android:gravity="center"
+            android:text="›"
+            android:textColor="@color/orange_primary"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Calendar Date Strip (ตัวเลขวันที่ถูกเซ็ตจากโค้ดตามสัปดาห์ที่เลือก) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="12dp"
+        android:paddingBottom="12dp"
+        android:weightSum="7">
+
+        <LinearLayout
+            android:id="@+id/dayMon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="จ" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+            <TextView android:id="@+id/badgeMon" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginTop="4dp" android:background="@drawable/bg_circle_button" android:backgroundTint="@color/orange_primary" android:gravity="center" android:text="13" android:textColor="@color/white" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dayTue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="อ" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+            <TextView android:id="@+id/badgeTue" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginTop="4dp" android:gravity="center" android:text="14" android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dayWed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="พ" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+            <TextView android:id="@+id/badgeWed" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginTop="4dp" android:gravity="center" android:text="15" android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dayThu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="พฤ" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+            <TextView android:id="@+id/badgeThu" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginTop="4dp" android:gravity="center" android:text="16" android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/dayFri"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ศ" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+            <TextView android:id="@+id/badgeFri" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginTop="4dp" android:gravity="center" android:text="17" android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/daySat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ส" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+            <TextView android:id="@+id/badgeSat" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginTop="4dp" android:gravity="center" android:text="18" android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/daySun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="4dp">
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="อา" android:textColor="@color/text_secondary" android:textSize="12sp"/>
+            <TextView android:id="@+id/badgeSun" android:layout_width="32dp" android:layout_height="32dp" android:layout_marginTop="4dp" android:gravity="center" android:text="19" android:textColor="@color/text_primary"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDayTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="วันจันทร์ (13 ต.ค.)"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <!-- Meal Item: เช้า -->
+            <LinearLayout
+                android:id="@+id/mealBreakfast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="เช้า"
+                    android:textColor="@color/orange_primary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvBreakfastName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🍚  ข้าวต้มหมู"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- Meal Item: กลางวัน -->
+            <LinearLayout
+                android:id="@+id/mealLunch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="กลางวัน"
+                    android:textColor="@color/orange_primary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvLunchName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🥘  ผัดกะเพราหมูสับ"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <!-- Meal Item: เย็น -->
+            <LinearLayout
+                android:id="@+id/mealDinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_card"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="70dp"
+                    android:layout_height="wrap_content"
+                    android:text="เย็น"
+                    android:textColor="@color/orange_primary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvDinnerName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="🍲  ต้มยำกุ้ง"
+                    android:textColor="@color/text_primary"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="›"
+                    android:textSize="20sp" />
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddMenu"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="28dp"
+                android:text="+ เพิ่มเมนูอาหารในแผน"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                app:backgroundTint="@color/orange_primary"
+                app:cornerRadius="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <include layout="@layout/include_bottom_nav" />
+
+</LinearLayout>

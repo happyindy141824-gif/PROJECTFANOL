@@ -1,0 +1,9 @@
+# คัดลอกไฟล์นี้เป็น local.properties (ไฟล์นั้นถูก .gitignore ไว้ ห้าม commit)
+#
+# 1) sdk.dir = ที่อยู่ Android SDK ของเครื่องเรา (Android Studio ใส่ให้อัตโนมัติ)
+# sdk.dir=C\:\\Users\\YOURNAME\\AppData\\Local\\Android\\Sdk
+#
+# 2) API key ของ Gemini ขอฟรีได้ที่ https://aistudio.google.com/apikey
+#    ถ้าไม่ใส่ แอปยังเปิดใช้งานส่วน offline ได้ปกติ แต่หน้า AI จะขึ้นข้อความเตือน
+GEMINI_API_KEY=
+GEMINI_MODEL=gemini-2.5-flash
